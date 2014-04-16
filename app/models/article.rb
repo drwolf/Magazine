@@ -1,17 +1,25 @@
 require 'open-uri'
+require 'nokogiri'
 
 class Article < ActiveRecord::Base
 
   def self.find_articles(url)
-    file = open(url)
-    regex = /<p>-- (.*)\(<a href="(http.?:\/\/.*\.[a-z]{2,3}\/)(.*)">(.*)<\/a>\).*<\/p>/
-    new_articles = file.scan(regex)
-    new_articles.each do |article|
-      site = Site.find_by_url(article[1]).first
-      site = Site.create(title:article[3], url: article[1]) unless site
-      article = Article.find_by_subdomain(article[2])
-      Article.create(title: article[0], subdomain: article[2], site_id: site.id)
+    download = open(url)
+    file = download.read
+    regex = /<p>-- (.*)\(<a href="((http.?:\/\/.*\.[a-z]{2,3}\/).*)">(.*)<\/a>\).*<\/p>/
+    article_links = file.scan(regex)
+    article_links.each do |link|
+      site = Site.find_by_url(link[2])
+      site = Site.create(title:link[3], url: link[2]) unless site
+      article = Article.find_by_url(link[1])
+      article = Article.create(title: link[0], url: link[1], site_id: site.id) unless article
+      begin
+        article_html = Nokogiri::HTML(open(article.url))
+      rescue
+        return
+      end
+      puts article_html.search("body")
     end
-  end 
+  end
 
 end

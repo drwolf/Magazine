@@ -2,7 +2,7 @@ class CreateArticles < ActiveRecord::Migration
   def change
     create_table :articles do |t|
       t.string :title
-      t.string :subdomain
+      t.string :url
       t.integer :site_id
       t.text :summary
 
