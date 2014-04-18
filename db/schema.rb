@@ -11,22 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140416011456) do
-
-  create_table "articles", force: true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.integer  "site_id"
-    t.text     "summary"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "sites", force: true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end

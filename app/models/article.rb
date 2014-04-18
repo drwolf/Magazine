@@ -18,7 +18,7 @@ class Article < ActiveRecord::Base
       rescue
         return
       end
-      puts article_html.search("body")
+      puts article_html.search("article").search("img")
     end
   end
 
