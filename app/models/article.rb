@@ -18,7 +18,15 @@ class Article < ActiveRecord::Base
       rescue
         return
       end
-      puts article_html.search("article").search("img")
+      images = article_html.search("article").search("img")
+      if images.size == 0
+        images = article_html.search(".post-body").search("img")
+        if images.length != 0
+          puts images
+        else
+          puts "OH NO!"
+        end
+      end
     end
   end
 
