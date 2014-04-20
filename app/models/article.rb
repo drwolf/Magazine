@@ -19,13 +19,13 @@ class Article < ActiveRecord::Base
         return
       end
       images = article_html.search("article").search("img")
-      if images.size == 0
-        images = article_html.search(".post-body").search("img")
-        if images.length != 0
-          puts images
-        else
-          puts "OH NO!"
-        end
+      images = article_html.search(".post-body").search("img") if images.size == 0
+      images = article_html.search(".post").search("img") if images.size == 0
+      images = article_html.search(".entry-content").search("img") if images.size == 0
+      if images.length != 0
+        puts images
+      else
+        puts "OH NO!"
       end
     end
   end

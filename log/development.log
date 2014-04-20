@@ -4499,3 +4499,230 @@ Migrating to CreateArticles (20140416011456)
   [1m[35mSite Load (0.2ms)[0m  SELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://dwaynelively.com/' LIMIT 1
   [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://dwaynelively.com/?p=131' LIMIT 1[0m
   [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSite Load (1.0ms)[0m  SELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://afoolwithapen.com/' LIMIT 1
+  [1m[36mArticle Load (1.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://afoolwithapen.com/2014/04/19/gentlemen-prefer-blues-a-short-review-of-sailor-jentle-sky-high-blue-ink/' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.3ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:47:46 UTC +00:00], ["site_id", 20], ["title", "Gentlemen prefer blues: A short review of Sailor Jentle Sky High blue ink "], ["updated_at", Sat, 19 Apr 2014 22:47:46 UTC +00:00], ["url", "http://afoolwithapen.com/2014/04/19/gentlemen-prefer-blues-a-short-review-of-sailor-jentle-sky-high-blue-ink/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.6ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.selectism.com/' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "sites" ("created_at", "title", "updated_at", "url") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:47:47 UTC +00:00], ["title", "Selectism"], ["updated_at", Sat, 19 Apr 2014 22:47:47 UTC +00:00], ["url", "http://www.selectism.com/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.selectism.com/2014/04/18/postalco-fw2014-exclusive/' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:47:47 UTC +00:00], ["site_id", 47], ["title", "Exclusive Look at Postalco's Fall 2014 Collection "], ["updated_at", Sat, 19 Apr 2014 22:47:47 UTC +00:00], ["url", "http://www.selectism.com/2014/04/18/postalco-fw2014-exclusive/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://inklode.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://inklode.com/2014/04/18/pelikan-edelstein-wood-box-ink-set/' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 19 Apr 2014 22:47:47 UTC +00:00], ["site_id", 3], ["title", "Pelikan Edelstein Wood Box Ink Set "], ["updated_at", Sat, 19 Apr 2014 22:47:47 UTC +00:00], ["url", "http://inklode.com/2014/04/18/pelikan-edelstein-wood-box-ink-set/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSite Load (0.2ms)[0m  SELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://penpaperinkletter.com/' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sites" ("created_at", "title", "updated_at", "url") VALUES (?, ?, ?, ?)  [["created_at", Sat, 19 Apr 2014 22:47:47 UTC +00:00], ["title", "Pen Paper Ink Letter"], ["updated_at", Sat, 19 Apr 2014 22:47:47 UTC +00:00], ["url", "http://penpaperinkletter.com/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://penpaperinkletter.com/pen-paper-ink-letter-podcast-episode-5-atlanta-pen-show-2014/' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 19 Apr 2014 22:47:47 UTC +00:00], ["site_id", 48], ["title", "Pen Paper Ink Letter Podcast Episode #5 – “The Atlanta Pen Show 2014” "], ["updated_at", Sat, 19 Apr 2014 22:47:47 UTC +00:00], ["url", "http://penpaperinkletter.com/pen-paper-ink-letter-podcast-episode-5-atlanta-pen-show-2014/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSite Load (0.1ms)[0m  SELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://patrickrhone.com/' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sites" ("created_at", "title", "updated_at", "url") VALUES (?, ?, ?, ?)  [["created_at", Sat, 19 Apr 2014 22:47:54 UTC +00:00], ["title", "Patrick Rhone"], ["updated_at", Sat, 19 Apr 2014 22:47:54 UTC +00:00], ["url", "http://patrickrhone.com/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://patrickrhone.com/2014/04/16/building-routines-or-how-i-became-a-daily-journal-writer/' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 19 Apr 2014 22:47:54 UTC +00:00], ["site_id", 49], ["title", "Building Routines (or, How I Became A Daily Journal Writer) "], ["updated_at", Sat, 19 Apr 2014 22:47:54 UTC +00:00], ["url", "http://patrickrhone.com/2014/04/16/building-routines-or-how-i-became-a-daily-journal-writer/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSite Load (0.1ms)[0m  SELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://fromthepencup.wordpress.com/' LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://fromthepencup.wordpress.com/2014/04/16/fun-find-1-retro-1951-tornado-umbra-orange-rollerball/' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:47:54 UTC +00:00], ["site_id", 15], ["title", "Fun Find #1: Retro 1951 Tornado Umbra Orange Rollerball "], ["updated_at", Sat, 19 Apr 2014 22:47:54 UTC +00:00], ["url", "http://fromthepencup.wordpress.com/2014/04/16/fun-find-1-retro-1951-tornado-umbra-orange-rollerball/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://everyday-carry.com/' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sites" ("created_at", "title", "updated_at", "url") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:47:55 UTC +00:00], ["title", "EDC is Everyday Carry"], ["updated_at", Sat, 19 Apr 2014 22:47:55 UTC +00:00], ["url", "http://everyday-carry.com/"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://everyday-carry.com/post/82903086022/karas-kustoms-made-a-name-for-themselves-amongst' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:47:55 UTC +00:00], ["site_id", 50], ["title", "Review: Karas Kustoms Retrakt "], ["updated_at", Sat, 19 Apr 2014 22:47:55 UTC +00:00], ["url", "http://everyday-carry.com/post/82903086022/karas-kustoms-made-a-name-for-themselves-amongst"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://edjelley.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://edjelley.com/2014/04/15/stipula-verde-muschiato-ink-review/' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 19 Apr 2014 22:47:55 UTC +00:00], ["site_id", 21], ["title", "Stipula Verde Muschiato – Ink Review "], ["updated_at", Sat, 19 Apr 2014 22:47:55 UTC +00:00], ["url", "http://edjelley.com/2014/04/15/stipula-verde-muschiato-ink-review/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSite Load (0.2ms)[0m  SELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://nopenintended.wordpress.com/' LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://nopenintended.wordpress.com/2014/04/15/uni-jetstream-41-4-color-ballpoint-multi-pen-and-pencil-purple/' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:47:56 UTC +00:00], ["site_id", 31], ["title", "Uni Jetstream 4&amp;1 4 Color Ballpoint Multi Pen and Pencil – Purple "], ["updated_at", Sat, 19 Apr 2014 22:47:56 UTC +00:00], ["url", "http://nopenintended.wordpress.com/2014/04/15/uni-jetstream-41-4-color-ballpoint-multi-pen-and-pencil-purple/"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://woodclinched.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://woodclinched.com/2014/04/15/baron-fig-confidant-review/' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 19 Apr 2014 22:47:57 UTC +00:00], ["site_id", 38], ["title", "The Baron Fig Confidant notebook: Unique, well-constructed, and well-hyped "], ["updated_at", Sat, 19 Apr 2014 22:47:57 UTC +00:00], ["url", "http://woodclinched.com/2014/04/15/baron-fig-confidant-review/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSite Load (0.2ms)[0m  SELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.thenewsprint.co/' LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.thenewsprint.co/blog/-on-my-desk-uni-ball-jetstream-rt-10mm' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:47:58 UTC +00:00], ["site_id", 23], ["title", "On My Desk: Uni-ball Jetstream RT 1.0mm "], ["updated_at", Sat, 19 Apr 2014 22:47:58 UTC +00:00], ["url", "http://www.thenewsprint.co/blog/-on-my-desk-uni-ball-jetstream-rt-10mm"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://thatonepen.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://thatonepen.com/2014/04/14/parker-51/' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 19 Apr 2014 22:47:58 UTC +00:00], ["site_id", 41], ["title", "Parker 51 "], ["updated_at", Sat, 19 Apr 2014 22:47:58 UTC +00:00], ["url", "http://thatonepen.com/2014/04/14/parker-51/"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSite Load (0.2ms)[0m  SELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://mysupplyroom.blogspot.com/' LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://mysupplyroom.blogspot.com/2014/04/bic-af-accountant-collection.html' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:47:59 UTC +00:00], ["site_id", 24], ["title", "BIC AF Accountant Collection "], ["updated_at", Sat, 19 Apr 2014 22:47:59 UTC +00:00], ["url", "http://mysupplyroom.blogspot.com/2014/04/bic-af-accountant-collection.html"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://clickypost.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://clickypost.com/blog/2014/4/13/pilot-juice-038mm-blue-pen-review' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 19 Apr 2014 22:48:00 UTC +00:00], ["site_id", 13], ["title", "Pilot Juice 0.38mm Blue Pen Review "], ["updated_at", Sat, 19 Apr 2014 22:48:00 UTC +00:00], ["url", "http://clickypost.com/blog/2014/4/13/pilot-juice-038mm-blue-pen-review"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSite Load (0.2ms)[0m  SELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://penpaperpencil.net/' LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://penpaperpencil.net/pelikan-m215-fountain-pen/' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:48:00 UTC +00:00], ["site_id", 9], ["title", "Pelikan M215 fountain pen review "], ["updated_at", Sat, 19 Apr 2014 22:48:00 UTC +00:00], ["url", "http://penpaperpencil.net/pelikan-m215-fountain-pen/"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://onelonemanspensandpencils.blogspot.com/' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sites" ("created_at", "title", "updated_at", "url") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:48:01 UTC +00:00], ["title", "Pens And Pencils"], ["updated_at", Sat, 19 Apr 2014 22:48:01 UTC +00:00], ["url", "http://onelonemanspensandpencils.blogspot.com/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://onelonemanspensandpencils.blogspot.com/2014/04/rotring-rapid-pro-black-vs-silver.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:48:01 UTC +00:00], ["site_id", 51], ["title", "rotring rapid PRO: Black vs Silver "], ["updated_at", Sat, 19 Apr 2014 22:48:01 UTC +00:00], ["url", "http://onelonemanspensandpencils.blogspot.com/2014/04/rotring-rapid-pro-black-vs-silver.html"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'https://mypencilsdrawworlds.wordpress.com/' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sites" ("created_at", "title", "updated_at", "url") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:48:02 UTC +00:00], ["title", "My pencils draw worlds"], ["updated_at", Sat, 19 Apr 2014 22:48:02 UTC +00:00], ["url", "https://mypencilsdrawworlds.wordpress.com/"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'https://mypencilsdrawworlds.wordpress.com/2014/04/12/new-arrival-all-three-maison-caran-dache-edition-pencil-sets/' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:48:02 UTC +00:00], ["site_id", 52], ["title", "New arrival: All three Les Crayons de la Maison Caran d’Ache Edition Pencil Sets "], ["updated_at", Sat, 19 Apr 2014 22:48:02 UTC +00:00], ["url", "https://mypencilsdrawworlds.wordpress.com/2014/04/12/new-arrival-all-three-maison-caran-dache-edition-pencil-sets/"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://thingsorganizedneatly.tumblr.com/' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sites" ("created_at", "title", "updated_at", "url") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:48:02 UTC +00:00], ["title", "Things Organized Neatly"], ["updated_at", Sat, 19 Apr 2014 22:48:02 UTC +00:00], ["url", "http://thingsorganizedneatly.tumblr.com/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://thingsorganizedneatly.tumblr.com/post/82513288209/stationery-compositions-hole-reinforcements' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "articles" ("created_at", "site_id", "title", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Apr 2014 22:48:02 UTC +00:00], ["site_id", 53], ["title", "Stationery-Compositions: Hole reinforcements, Erasers, Pencil Sharpeners "], ["updated_at", Sat, 19 Apr 2014 22:48:02 UTC +00:00], ["url", "http://thingsorganizedneatly.tumblr.com/post/82513288209/stationery-compositions-hole-reinforcements"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.bennadel.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.bennadel.com/blog/2604-The-User-Experience-UX-Of-Sketching-In-Prototyping.htm' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'https://nopenintended.wordpress.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'https://nopenintended.wordpress.com/2014/04/09/the-bolt-copper/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://inklode.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://inklode.com/2014/04/11/montblanc-lavender-purple/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.inkdependence.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.inkdependence.com/2014/04/monteverdes-artista-crystal.html' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://unroyalwarrant.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://unroyalwarrant.com/2014/04/11/kaweco-allrounder-fountain-pen-quick-review/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://bleistift.memm.de/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://bleistift.memm.de/?p=3489' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.katrinaalana.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.katrinaalana.com/blog/2014/04/flexible-fountain-pen-for-calligraphy/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.gourmetpens.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.gourmetpens.com/2014/04/review-1901fc-franklin-christoph-model.html' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://penpaperpencil.net/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://penpaperpencil.net/comparison-of-d1-refills-part-one/' LIMIT 1
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://inkofmefondly.blogspot.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://inkofmefondly.blogspot.com/2014/04/prussian-blue-diamine-ink-review.html' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://officesupplygeek.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://officesupplygeek.com/pen-review/gel-pens/uni-ball-signo-um-151-revisiting-old-favorite/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://thefrugalfountainpen.blogspot.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://thefrugalfountainpen.blogspot.com/2014/04/hero-100-fountain-pen.html' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://clickypost.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://clickypost.com/blog/2014/4/9/palomino-golden-bear-2-pencil' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://blankandwrite.blogspot.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://blankandwrite.blogspot.com/2014/04/my-new-navy-blue-cover-by-cody-williams.html' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://fromthepencup.wordpress.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://fromthepencup.wordpress.com/2014/04/08/soft-landing-uni-jetstream-alpha-gel-grip-ballpoint/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://inktronics.wordpress.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://inktronics.wordpress.com/2014/04/08/kokuyo-camiapp-notebook-review/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://peninkcillin.blogspot.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://peninkcillin.blogspot.com/2014/04/diamine-graphite-ink-review.html' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.cultofmac.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.cultofmac.com/273455/baron-fig-confidant-best-paper-notebook-ive-used-review/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.notebookstories.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.notebookstories.com/2014/04/08/review-hahnemuhle-travel-journal-and-travel-booklets/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://afoolwithapen.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://afoolwithapen.com/2014/04/08/a-clear-winner-a-review-of-the-twsbi-diamond-580/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://edjelley.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://edjelley.com/2014/04/08/rohrer-klingner-salix-iron-gall-ink-review/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://burningmonster.blogspot.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://burningmonster.blogspot.com/2014/04/white-ink-pen-tests.html' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.thenewsprint.co/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.thenewsprint.co/blog/on-my-desk-field-notes-expedition-edition' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://mysupplyroom.blogspot.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://mysupplyroom.blogspot.com/2014/04/first-papermate-retractable-ball-point.html' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://reverencedreading.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://reverencedreading.com/why-i-use-a-fountain-pen/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://fpquest.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://fpquest.com/2014/04/07/review-sheaffer-intensity-carbon-fiber/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.overthought.org/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.overthought.org/blog/2014/a-review-of-my-add-self-trying-to-use-field-notes' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://penhabit.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://penhabit.com/2014/04/06/pen-review-fountain-pen-revolution-triveni/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.blessedarethegeeks.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.blessedarethegeeks.com/2014/04/05/review-uni-ball-signo-207-7mm-in-honour-of-the-pen-addicts-100th/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://clickypost.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://clickypost.com/blog/2014/4/3/ti2-techliner-prototype-pen-by-mike-bond-kickstarter' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://scribalishess.wordpress.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://scribalishess.wordpress.com/2014/04/05/pensieve-nakaya-ao-tamenuri-decapod-twist-a-review/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://nopenintended.wordpress.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://nopenintended.wordpress.com/2014/04/04/lamy-safari-fountain-pen-apple-green-body-m-nib/' LIMIT 1
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://yihogyun.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://yihogyun.com/wordpress/field-notes-retail-performance-art/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://officesupplygeek.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://officesupplygeek.com/ink-review/black/organics-studio-walt-whitman-leaves-grass-green-black/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://edjelley.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://edjelley.com/2014/04/04/kokuyo-campus-wide-notebook-review/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://clickypost.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://clickypost.com/blog/2014/4/1/caran-dache-849-ballpoint' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://penpaperpencil.net/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://penpaperpencil.net/kokuyo-neocritz-transformer-pencil-case-review/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://estilofilos.blogspot.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://estilofilos.blogspot.com/2014/04/pilot-capless-1971-c-400bs-and-c-400ss.html' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://fpquest.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://fpquest.com/2014/04/03/ink-notes-graf-von-faber-castell-garnet-red/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://afoolwithapen.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://afoolwithapen.com/2014/04/03/a-review-of-the-fc-03-iterum-with-masuyama-needlepoint-nib/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.gourmetpens.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.gourmetpens.com/2014/04/review-kaweco-calligraphy-pen-set-black.html' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.myantiquepens.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.myantiquepens.com/2014/04/post-004-conklin-crescent-model-20.html' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.justdaveyb.me/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.justdaveyb.me/posts/2014/4/4/r5t6v3xxog0vpdyrdg3att57sodpx8' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.yippeecahier.net/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.yippeecahier.net/blog/sunshine-on-my-sketchbook-makes-me-happy' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://wellappointeddesk.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://wellappointeddesk.com/2014/04/02/review-banditapple-carnet-notebooks/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://woodclinched.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://woodclinched.com/2014/04/02/my-father-in-laws-old-notebooks/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.thisiscolossal.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.thisiscolossal.com/2014/04/elastika-girl/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.mypenneedsink.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.mypenneedsink.com/blog/2014/03/31/review-uni-ball-signo-um-151-38-mm/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.thenewsprint.co/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.thenewsprint.co/blog/-on-my-desk-field-notes-shelterwood-edition' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://thatonepen.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://thatonepen.com/2014/03/31/energel-vs-vicuna-or-gel-vs-hybrid-in-general/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://fromthepencup.wordpress.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://fromthepencup.wordpress.com/2014/04/01/i-heart-you-pelikan-m205-and-levenger-shiraz-ink/' LIMIT 1
+  [1m[36mSite Load (0.1ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.pencilrevolution.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.pencilrevolution.com/2014/04/cool-blue-sun-star-pencil-gear1/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://www.banasikcayaz.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://www.banasikcayaz.com/2014/03/pelikan-400-tortoise-shell-fountain-pen.html' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://oncenewvintage.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://oncenewvintage.com/diamond-ink-co-4/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://mypencilsdrawworlds.wordpress.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://mypencilsdrawworlds.wordpress.com/2014/03/27/new-arrival-rotring-trio-lava-multipen/' LIMIT 1
+  [1m[36mSite Load (0.2ms)[0m  [1mSELECT "sites".* FROM "sites" WHERE "sites"."url" = 'http://dwaynelively.com/' LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."url" = 'http://dwaynelively.com/?p=131' LIMIT 1
+  [1m[36m (54.4ms)[0m  [1mrollback transaction[0m
